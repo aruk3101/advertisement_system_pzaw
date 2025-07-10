@@ -1,19 +1,35 @@
-# advertisement_system_pzaw
+# Advertisement System – Unfinished School Project
 
-# Termin 05.11.2023 - Wstepny projekt bazy danych
+## Description
 
-Moja baza danych (pgsql) jest realizowana [migracjami liquibase](backend/SystemOgloszeniowy/src/main/resources/db/changelog/)
+This is an unfinished assessment project developed during the 4th year of vocational high school as part of an _Advanced Web Application Programming_ course. The backend is fully functional, but the frontend is in an early development stage and lacks many pages and features.
 
-Ale przygotowałem 2 zrzuty ekranu [ERD1](backend/SystemOgloszeniowy/ERD1.png) [ERD2](backend/SystemOgloszeniowy/ERD2.png) schematów ERD wygenerowanych w pgAdmin 4 oraz [backup bazy danych](backend/SystemOgloszeniowy/system_ogloszeniowy_db_backup.sql), ale niestety phpmyadmin, go nie trawi.
+During the presentation, I used [Render](https://render.com/) to deploy a Dockerized version of the backend. Because of this, both the frontend and backend have specific preferences depending on whether the project is run locally or deployed on an external server.
 
-Dlatego najlepszym źródłem będą schematy ERD
+In the case of the frontend:
+- `npm start` starts the React app locally and connects to a locally running Spring Boot backend.
+- `npm run deploy` starts the React app locally but connects to the backend deployed on Render.
 
-# Termin 03.12.2023 - Widok strony głównej, profilu użytkownika i oferty pracy
+The backend was developed using IntelliJ IDEA Community Edition. To run it, a custom Run/Debug configuration is required. This configuration uses the standard Maven template with the command: _spring-boot:run_ and the environment variable: _spring.profiles.active=local_ adjusted according to the environment.
 
-[Frontend](https://github.com/aruk3101/advertisement_system_pzaw/tree/0aae4eff5defaf1642af15dd547fafaa75a7c721/frontend/advertisement_system_pzaw_front) jest zrobiony w react + webpack.
+In [this directory](backend/SystemOgloszeniowy/src/main/resources), you'll find two separate configuration files corresponding to the different deployment environments.
 
-Żeby odpalić wymagany jest nodejs i trzeba wpisać komendy npm install oraz npm start.
+Although the project is unfinished, it was still awarded the highest possible grade.
 
-* Pod linkiem http://localhost:3000/ jest strona główna.
-* Pod linkiem http://localhost:3000/user/profile jest strona użytkownika.
-* Pod linkiem http://localhost:3000/advertisement/some-uuid jest strona ogłoszenia.
+## Used Frameworks
+
+### Backend
+- Spring Boot
+- Java 17
+- Liquibase
+- PostgreSQL 14
+- Docker (optional, for deployment)
+
+### Frontend
+- React.js + Webpack
+- Bootstrap
+- React Toastify
+	
+## 📄 Project requirements
+
+[Project requirements (in Polish)](https://drive.google.com/file/d/1B1EeGr7Roi5OVLkDcZi8VIX_oyW9Z71x/view?usp=sharing)
